@@ -26,10 +26,10 @@
     let index = 0;
     let isDeleting = false;
 
-    const typingSpeed = 120;   // kecepatan ngetik
-    const deletingSpeed = 80;  // kecepatan hapus
-    const pauseAfterType = 1500; // jeda setelah selesai ngetik
-    const pauseAfterDelete = 500; // jeda setelah hapus
+    const typingSpeed = 120;
+    const deletingSpeed = 80;
+    const pauseAfterType = 1500;
+    const pauseAfterDelete = 500;
 
     function typeLoop() {
         if (!isDeleting) {
