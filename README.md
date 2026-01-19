@@ -137,12 +137,12 @@ http://127.0.0.1:8000
 ### 🔑 Admin
 
 * **Email:** [admin@klinik.test](mailto:admin@klinik.test)
-* **Password:** password123
+* **Password:** password
 
 ### 👤 User (Pasien)
 
 * **Email:** [user@klinik.test](mailto:user@klinik.test)
-* **Password:** password123
+* **Password:** password
 
 > Akun demo dibuat melalui **database seeder**.
 
