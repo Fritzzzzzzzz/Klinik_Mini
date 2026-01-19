@@ -23,7 +23,7 @@ Route::get('/', function () {
     if (auth()->check()) {
         return auth()->user()->role === 'admin'
             ? redirect()->route('admin.dashboard')
-            : redirect()->route('user.dashboard');
+            : redirect()->route('user.home');
     }
 
     return view('welcome');
@@ -64,19 +64,23 @@ Route::post('/reset-password', [ResetPasswordController::class, 'update'])
 Route::middleware('auth')
     ->prefix('user')
     ->group(function () {
+
+        Route::get('/home', function () {
+            return view('user.home');
+        })->name('user.home');
+
         Route::get('/dashboard', [UserDashboardController::class, 'index'])
             ->name('user.dashboard');
 
-        Route::post('/queue/{queue}/cancel', [QueueController::class, 'cancel'])
-            ->name('queue.cancel');
-
         Route::get('/appointment', [QueueController::class, 'create'])
             ->name('queue.create');
-        
+
         Route::post('/appointment', [QueueController::class, 'store'])
             ->name('queue.store');
-    });
 
+        Route::post('/queue/{queue}/cancel', [QueueController::class, 'cancel'])
+            ->name('queue.cancel');
+    });
 /*
 |--------------------------------------------------------------------------
 | Admin Routes

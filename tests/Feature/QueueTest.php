@@ -12,7 +12,7 @@ use Tests\TestCase;
 class QueueTest extends TestCase
 {
     /**
-     * A basic feature test example.
+     * test untuk cek jika quota antrian sudah penuh tidak dapat register
      */
     public function test_user_cannot_register_if_quota_full() {
     $user = User::factory()->create();

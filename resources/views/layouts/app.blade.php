@@ -39,8 +39,18 @@
                 @auth
                     {{-- Dashboard User --}}
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('user.home') }}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('user.dashboard') }}">
-                            Dashboard
+                            Riwayat Antrian
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('queue.create') }}">
+                            Buat Janji Temu
                         </a>
                     </li>
 

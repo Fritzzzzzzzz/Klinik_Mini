@@ -15,7 +15,7 @@ class LoginController extends Controller
             return route('admin.dashboard');
         }
 
-        return route('user.dashboard');
+        return route('user.home');
     }
 
     public function __construct()

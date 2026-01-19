@@ -8,7 +8,7 @@
         <form method="POST" action="{{ route('queue.store') }}">
             @csrf
 
-            {{-- PILIH POLI --}}
+            {{-- FORMPILIH POLI --}}
             <div class="mb-3">
                 <label class="form-label">Pilih Poli</label>
                 <select id="poliSelect" class="form-select" required>
@@ -19,7 +19,7 @@
                 </select>
             </div>
 
-            {{-- PILIH DOKTER --}}
+            {{-- FORM PILIH DOKTER --}}
             <div class="mb-3">
                 <label class="form-label">Pilih Dokter</label>
                 <select name="doctor_id" id="doctorSelect" class="form-select" required>
@@ -36,14 +36,14 @@
                 </select>
             </div>
 
-            {{-- TANGGAL TEMU --}}
+            {{-- FORM TANGGAL JANJI TEMU --}}
             <div class="mb-3">
                 <label class="form-label">Tanggal Temu</label>
                 <input type="date" name="visit_date" class="form-control"
                        min="{{ now()->toDateString() }}" required>
             </div>
 
-            {{-- KELUHAN --}}
+            {{-- FORM KELUHAN --}}
             <div class="mb-3">
                 <label class="form-label">Keluhan</label>
                 <textarea name="complaint" class="form-control"
